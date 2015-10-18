@@ -18,8 +18,8 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 VOLUME /config /downloads /tv
 EXPOSE 8081
 
-ADD cron/ /etc/cron.d/
-RUN chmod 0644 /etc/cron.d/cronjob
+#ADD cron/ /etc/cron.d/
+#RUN chmod 0644 /etc/cron.d/cronjob
 
 
 
