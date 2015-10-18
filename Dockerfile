@@ -6,7 +6,6 @@ ENV PYTHONIOENCODING="UTF-8"
 
 # install pip packages
 RUN pip install mako && \
-apt-get install -qy mc \
 apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 # Adding Custom files
