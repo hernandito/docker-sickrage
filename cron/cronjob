@@ -1,2 +1,5 @@
 * * * * * root echo "Hello world" 
+
+0 * * * * cp -R /config/sickrage-edits/gui/slick /app/sickrage/gui/
+
 # An empty line is required at the end of this file for a valid cron file.
