@@ -1,4 +1,6 @@
 #!/bin/bash
+crontab -l > mycron
+echo "0/5 * * * * cp -R /config/sickrage-edits/gui/slick /app/sickrage/gui/" >> mycron
+crontab mycron
+rm mycron
 
-* * * * * root echo "Hello world" 
-0/5 * * * * cp -R /config/sickrage-edits/gui/slick /app/sickrage/gui/
