@@ -2,3 +2,11 @@
 umask 0002
 exec /sbin/setuser abc python /app/sickrage/SickBeard.py --datadir /config
 cp -R /config/sickrage-edits/gui/slick /app/sickrage/gui/
+
+#write out current crontab
+crontab -l > mycron
+#echo new cron into cron file
+echo "0 * * * * cp -R /config/sickrage-edits/gui/slick /app/sickrage/gui/" >> mycron
+#install new cron file
+crontab mycron
+rm mycron
